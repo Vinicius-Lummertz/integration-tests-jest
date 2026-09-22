@@ -147,12 +147,12 @@ describe('Futebol API', () => {
         .spec()
         .post(`${baseUrl}/api/estadios`)
         .withJson({
-          nome: 'Estádio de Teste',
-          cidade: 'São Paulo',
+          nome: `Estadio Teste ${Date.now()}`,
+          cidade: 'Sao Paulo',
           capacidade: 50000
         })
         .expectStatus(StatusCodes.CREATED);
-        });
+    });
 
     it('deve buscar um estádio por id', async () => {
       await p
